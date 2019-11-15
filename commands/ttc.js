@@ -4,6 +4,7 @@ exports.run = async (bot, message, args) => {
   var json = {
     Name: "game night",
     Description: "have fun",
+    Category : "Events",
     Date: "Nov 22 6pm-10pm"
   }
   var link = "https://discord.js.org/#/docs/main/stable/class/Client";
