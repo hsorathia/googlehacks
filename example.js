@@ -26,7 +26,6 @@ module.exports = {
           }
         }
       });
-      if (cat_id == '')
       
       guild
         .createChannel(ch_name, { type: "text" })
