@@ -11,5 +11,4 @@ module.exports = async (client) => {
     console.log (`Ready Error`);
 		console.log (e.stack);
 	}
-
 }

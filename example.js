@@ -6,9 +6,10 @@ module.exports = {
       //Grabbing variables from json. Declaring these variables so you can easily manage them if the json setup is different, which it wil be
       var ch_name = json.Name;
       var ch_desc = json.Description;
-      var date = json.Date
-      var calendar_link = link;
-
+      // var date = json.Date
+      // var calendar_link = link;
+      var msg = "Date is " + j
+      
       guild
         .createChannel(ch_name, { type: "text" })
         .then(async txtChannel => {

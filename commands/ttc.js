@@ -6,7 +6,7 @@ exports.run = async (bot, message, args) => {
     Description: "have fun",
     Date: "Nov 22 6pm-10pm"
   }
- var link = "https://discord.js.org/#/docs/main/stable/class/Client";
+  var link = "https://discord.js.org/#/docs/main/stable/class/Client";
   example.createnewchannel(message.guild, json, link);
 };
 
