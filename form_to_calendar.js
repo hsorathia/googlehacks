@@ -10,25 +10,35 @@ function onSubmit(e){
         answers[i] = wholeItems[i].getResponse();
     }
 
-    var title = answers[0];
-    var eventDate = answers[1];
-    var eventTime = answers[2];
-    var eventDuration = answers[3];
+    var addOrSearch = answers[0];
+    var title = answers[1];
+    var emails = answers[2];
+    var eventDate = answers[3];
+    var eventTime = answers[4];
+    var eventDuration = answers[5];
+    var id = answers[6];
 
-    var startTime = new Date(eventDate + "T" + eventTime + ":00Z");
-    var endTime = new Date(startTime.getTime() + (eventDuration*60*60*1000));
+    if (addOrSearch === "Adding")
+    {
+        var startTime = new Date(eventDate + "T" + eventTime + ":00Z");
+        var endTime = new Date(startTime.getTime() + (eventDuration*60*60*1000));
+        var testCalendar = CalendarApp.getDefaultCalendar();
+        var event = testCalendar.createEvent(title,
+            startTime,
+            endTime,
+            {
+                guests: emails,
+                sendInvites: true
+            }
+        );
+        form.setConfirmationMessage("ID is " + lastResponse.getId());
 
-    var currentDate = new Date();
-    var currentDatePlusTwo = new Date(currentDate.getTime() + (2*60*60*1000));
-
-    var testCalendar = CalendarApp.getDefaultCalendar();
-  
-    var event = testCalendar.createEvent(title,
-        startTime,
-        endTime,
+    }
+    else if (addOrSearch === "Searching")
+    {
+        for (var i = 0; i < formResponses; i++)
         {
-          description: eventDate + " " + eventTime + " " + eventDuration + "\n" + startTime + " " + endTime
+            
         }
-    );
-    Logger.log(startTime + " " + endTime);
+    }
 }
