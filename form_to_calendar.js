@@ -15,8 +15,11 @@ function onSubmit(e){
     var eventTime = answers[2];
     var eventDuration = answers[3];
 
-    var startTime = new Date(eventDate + " " + eventTime);
+    var startTime = new Date(eventDate + "T" + eventTime + ":00Z");
     var endTime = new Date(startTime.getTime() + (eventDuration*60*60*1000));
+
+    var currentDate = new Date();
+    var currentDatePlusTwo = new Date(currentDate.getTime() + (2*60*60*1000));
 
     var testCalendar = CalendarApp.getDefaultCalendar();
   
@@ -24,7 +27,7 @@ function onSubmit(e){
         startTime,
         endTime,
         {
-          description: eventDate + " " + eventTime + " " + eventDuration
+          description: eventDate + " " + eventTime + " " + eventDuration + "\n" + startTime + " " + endTime
         }
     );
     Logger.log(startTime + " " + endTime);
