@@ -1,6 +1,6 @@
 module.exports = {
   createnewchannel: function(guild, json, link) {
-    return Promise ( (res,rej) => {
+    return new Promise ( (res,rej) => {
       console.log('Create new channel called');
        //PLEASE CHANGE THESE LINES
       //Grabbing variables from json. Declaring these variables so you can easily manage them if the json setup is different, which it wil be

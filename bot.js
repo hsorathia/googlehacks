@@ -3,8 +3,10 @@ const fs = require("fs");
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
+//new Collection of commands
 client.commands = new Discord.Collection();
 
+//grab from events folder and assigning to client events
 fs.readdir("./events/", (err, files) => {
   if (err) return console.error(err);
   files.forEach(file => {
@@ -16,6 +18,7 @@ fs.readdir("./events/", (err, files) => {
   });
 });
 
+//grab commands from commands/ and assign to collection
 fs.readdir('./commands/', (err, files) => { 
   if(err) console.error(err);
 
