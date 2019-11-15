@@ -7,7 +7,8 @@ module.exports = {
       var ch_desc = json.Description;
       // var date = json.Date
       // var calendar_link = link;
-      var msg = "Date is " + json.Date.toString() + ".\n The link is "+ link.toString()
+      var msg = "Date is " + json.Date.toString() + ".\n The link is "+ link.toString();
+      guild.foreach(function(element)
       var event_id = '644959822910849025'
       
       guild

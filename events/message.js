@@ -1,7 +1,5 @@
 var prefix = "!";
 module.exports = async (client, message) => {
-  console.log("msg");
-  console.log(message.content);
   let args = message.content.split(" ");
 	let cmd = args[0].toLowerCase();
 	args = args.slice(1);

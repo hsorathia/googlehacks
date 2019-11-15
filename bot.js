@@ -28,7 +28,7 @@ fs.readdir('./commands/', (err, files) => {
     return console.log('No command files found...');
   }
 
-  console.log(`Loading ${files.length} commands...`);
+  // console.log(`Loading ${files.length} commands...`);
 
   cmds.forEach((f, i) => { 
     const command = require(`./commands/${f}`);
