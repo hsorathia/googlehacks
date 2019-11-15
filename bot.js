@@ -40,4 +40,4 @@ fs.readdir('./commands/', (err, files) => {
   }); 
 });
 
-client.login (process.env.SECRET)
+// client.login (process.env.SECRET)
