@@ -6,9 +6,8 @@ from flask_login import LoginManager
 
 app = Flask(__name__)
 app.config.from_object(Config)
-
 db = SQLAlchemy(app)
-
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./user.db'
 login = LoginManager(app)
 login.login_view = 'login'
 
