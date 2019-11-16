@@ -1,0 +1,25 @@
+#form-frame{
+    width: 100%;
+}
+#title{
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 7vw;
+    font-style: bold;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+#pitch{
+    font-size: 1.5vw;
+    font-style: bold;
+}
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .footer {
+      float: right;
+  }
