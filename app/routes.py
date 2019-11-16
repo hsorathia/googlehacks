@@ -4,3 +4,4 @@ from app import app, db
 @app.route('/home')
 def Home():
     return render_template('home.html')
+    
