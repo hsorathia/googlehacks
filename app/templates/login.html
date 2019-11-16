@@ -14,9 +14,9 @@ Login Page
     <form method="post" action="">
         {{ form.hidden_tag() }}
         <p>{{ form.username.label }}{{ form.username(size=20) }}</p>
-        <p>{{ form.password.label }} {{ form.password(size = 32) }}</p>
-        <p>{{ form.rememberMe() }} {{ form.rememberMe.label }}</p>
+        <p>{{ form.password.label }}{{ form.password(size = 20) }}</p>
+        <p>{{ form.rememberMe() }}{{ form.rememberMe.label }}</p>
         <p>{{ form.submit() }}</p>
     </form>
-</div>>
+</div>
 {% endblock %}

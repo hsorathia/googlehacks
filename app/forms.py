@@ -8,7 +8,7 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 class LoginForm(FlaskForm):
     username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
     password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
-    remember = BooleanField('remember me')
+    rememberMe = BooleanField('remember me')
     submit = SubmitField('submit')
 
 class RegistrationForm(FlaskForm):
@@ -21,11 +21,11 @@ class RegistrationForm(FlaskForm):
     submit = SubmitField('Login')
 
     def validate_username(self, username):
-        # user = User.query.filter_by(username=username.data).first()
+        user = User.query.filter_by(username=username.data).first()
         if user is not None:
             raise ValidationError('Please use a different username.')
 
     def validate_email(self, email):
-        # user = User.query.filter_by(email=email.data).first()
+        user = User.query.filter_by(email=email.data).first()
         if user is not None:
             raise ValidationError('Please use a different email address.')
