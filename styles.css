@@ -1,0 +1,35 @@
+body {
+    background-image: url("abstract-art-background-blue-370799.png");
+    background-color: #00ccff;
+   } 
+
+#form-frame{
+    width: 100%;
+}
+#title{
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 7vw;
+    font-style: bold;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+#pitch{
+    font-size: 1.5vw;
+    font-style: bold;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+#image-credit{
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .footer {
+      float: right;
+  }
