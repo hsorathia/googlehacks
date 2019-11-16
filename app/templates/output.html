@@ -1,12 +1,17 @@
-<!DOCTYPE html>
-<head>
+{% extends "base.html" %}
+
+{% block title %}
 <title>Cobra</title>
+{% endblock %}
+
+
+{% block head %}
 <meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" href="../static/styles.css">
+{% endblock %}
 
-</head>
-<body>
+{% block body %}
     <div class="center">
         <h1 id="title">Cobra</h1>
     </div>
@@ -16,5 +21,4 @@
     <div class="center">
             <iframe id="form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSdqut4owcVYuoWcJZYipJTsAbUFPdC5wQIxKiV5OiPMi03skw/viewform?embedded=true" width="640" height="1286" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
-</body>
-</html>
+{% endblock %}
